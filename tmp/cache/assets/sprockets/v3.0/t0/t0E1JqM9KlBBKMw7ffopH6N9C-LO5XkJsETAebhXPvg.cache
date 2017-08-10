@@ -1,0 +1,17 @@
+I"(function() {
+  $(document).ready(function() {
+    $('#weeklyDatePicker').datetimepicker({
+      format: 'DD-MMM-YYYY'
+    });
+    $('#weeklyDatePicker').on('dp.change', function(e) {
+      var firstDate, lastDate, value;
+      value = $('#weeklyDatePicker').val();
+      firstDate = moment(value, 'DD-MMM-YYYY').day(0).format('DD-MMM-YYYY');
+      lastDate = moment(value, 'DD-MMM-YYYY').day(6).format('DD-MMM-YYYY');
+      $('#weeklyDatePicker').val(firstDate + ' - ' + lastDate);
+      $("form").submit();
+    });
+  });
+
+}).call(this);
+:ET

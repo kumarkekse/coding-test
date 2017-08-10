@@ -1,0 +1,22 @@
+<table class="table table-inverse ">
+  <thead>
+    <tr>
+      <th>ORDER ID</th>
+      <th>PRODUCT NAME</th>
+      <th>PRODUCT CATEGORY</th>
+      <th>STATUS</th>
+      <th>ORDERED ON</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.id %></th>
+      <td><%= order.product.name %></td>
+      <td><%= order.product.category.name %></td>
+      <td><%= order.status %></td>
+      <td><%= order.created_at.strftime("%B %d, %Y") %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

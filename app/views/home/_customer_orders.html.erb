@@ -1,0 +1,7 @@
+<% @orders.each do |key,val| %>
+  <tr>
+    <th scope="row"><%=key %> Orders</th>
+    <td><%= val %></td>
+    <td><%= ((key*val)*100)/@total_orders rescue 0 %>%</td>
+  </tr>
+<% end %>

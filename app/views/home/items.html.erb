@@ -1,0 +1,30 @@
+<%= form_tag "/home/items",method: :get,remote:true do  %>  
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-6 form-group">
+          <div class="input-group" id="DateDemo">
+            <input type='text' name="daterange" id='weeklyDatePicker' placeholder="Select Week" />
+          </div>
+      </div>
+    </div>
+  </div>   
+<% end %>
+   
+<table class="table table-inverse table-bordered">
+  <thead>
+    <tr>
+      <th>ITEM ID</th>
+      <th>ITEM NAME</th>
+      <th>PRODUCT NAME</th>
+      <th>SOLD QUANTITY</th>
+    </tr>
+  </thead>
+  <tbody class="items">
+  <%=render 'items'%>
+  </tbody>
+</table>
+<script type="text/javascript">
+  $('#weeklyDatePicker').datetimepicker({
+    format: 'DD-MMM-YYYY'
+  });
+</script>

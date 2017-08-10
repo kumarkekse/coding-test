@@ -1,0 +1,99 @@
+<table class="table table-inverse table-bordered">
+  <thead>
+    <tr>
+      <th>Orders</th>
+      <th>Customers</th>
+      <th>Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.id %></th>
+      <td><%= order.product.name %></td>
+      <td><%= order.product.category.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<table class="table table-inverse table-bordered">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Reccuring</th>
+      <th>Customer</th>
+      <th>New Customer</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.id %></th>
+      <td><%= order.product.name %></td>
+      <td><%= order.product.category.name %></td>
+      <td><%= order.status %></td>
+      <td><%= order.status %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="table table-inverse table-bordered">
+  <thead>
+    <tr>
+      <th>Orders</th>
+      <th>Customers</th>
+      <th>Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.id %></th>
+      <td><%= order.product.name %></td>
+      <td><%= order.product.category.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<table class="table table-inverse table-bordered">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Reccuring</th>
+      <th>Customer</th>
+      <th>New Customer</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.id %></th>
+      <td><%= order.product.name %></td>
+      <td><%= order.product.category.name %></td>
+      <td><%= order.status %></td>
+      <td><%= order.status %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

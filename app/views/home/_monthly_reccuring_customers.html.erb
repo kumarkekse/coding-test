@@ -1,0 +1,8 @@
+<% @month_data.each do |order| %>
+  <tr>
+    <th scope="row"><%= order[:month] %></th>
+    <td><%= order[:reccuring_customer] %></td>
+    <td><%= order[:new_customer] %></td>
+    <td><%= order[:total] %></td>
+  </tr>
+<% end %>
